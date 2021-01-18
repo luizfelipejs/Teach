@@ -1,6 +1,6 @@
 import { ITeacher } from '../entities/teacher'
 
 export interface ITeacherRepositorie {
-  create: (data: ITeacher) => Promise<void>;
-  find: (id: number) => Promise<ITeacher>;
+  createTeacher: (data: ITeacher) => Promise<void>;
+  findTeacher: (id: number) => Promise<ITeacher>;
 }

@@ -9,7 +9,7 @@ class CreateStudentCase {
   }
 
   async execute (data: IStudent) {
-    await this.studentRepositorie.create(data)
+    await this.studentRepositorie.createStudent(data)
   }
 }
 

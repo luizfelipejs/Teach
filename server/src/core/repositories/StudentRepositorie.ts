@@ -1,6 +1,6 @@
 import { IStudent } from '../entities/student'
 
 export interface IStudentRepositorie {
-  create: (data: IStudent) => Promise<void>;
-  find: (id: number) => Promise<IStudent>;
+  createStudent: (data: IStudent) => Promise<IStudent>;
+  findStudent: (id: number) => Promise<IStudent>;
 }
