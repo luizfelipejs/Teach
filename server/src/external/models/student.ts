@@ -15,7 +15,7 @@ export class Student  {
   @Column({ unique: true })
   username: string
 
-  @Column()
+  @Column({ unique: true })
   email: string
 
   @Column()

@@ -9,16 +9,19 @@ export class Teacher {
   @Column()
   name: string;
   
-  @Column()
+  @Column({ unique: true })
   username: string
 
-  @Column()
+  @Column({ unique: true })
   email: string
 
   @Column()
   password: string
 
-  @ManyToMany(type => Student, student => student.teachers)
+  @ManyToMany(type => Student, 
+    student => student.teachers, 
+    { cascade: ['insert', 'update'] }
+  )
   @JoinTable()
   students: Teacher[]
 
